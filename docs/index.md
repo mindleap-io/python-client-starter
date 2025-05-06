@@ -1,5 +1,5 @@
 ---
-title: Mindleap Starter Python Client
+title: Getting Started
 layout: default
 nav_order: 1
 ---
