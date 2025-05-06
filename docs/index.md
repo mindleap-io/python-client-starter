@@ -1,5 +1,7 @@
 ---
 title: Mindleap Starter Python Client
+layout: default
+nav_order: 1
 ---
 
 Mindleap Starter Python Client

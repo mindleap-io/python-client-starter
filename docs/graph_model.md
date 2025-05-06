@@ -1,5 +1,7 @@
 ---
 title: Graph Model
+layout: default
+nav_order: 2
 ---
 
 Graph Model

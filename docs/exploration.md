@@ -1,5 +1,7 @@
 ---
 title: Exploration
+layout: default
+nav_order: 3
 ---
 
 Exploration
