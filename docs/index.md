@@ -125,11 +125,11 @@ Example
 
 Contribution
 ------------
-If you're interested in contributing code to this project, check out the [contribution guidelines](contribution.md).
+If you're interested in contributing code to this project, check out the [contribution guidelines]({% link contribution.md %}).
 
 License
 -------
-The Mindleap Starter Python Client library is open source under the [MIT License](LICENSE).
+The Mindleap Starter Python Client library is open source under the [MIT License]({% link LICENSE %}).
 
 This GitHub Pages site uses the "just-the-docs" Jekyll template,
-which is governed by the following [MIT License](LICENSE_just_the_docs).
+which is governed by the following [MIT License]({% link LICENSE_just_the_docs %}).
