@@ -125,7 +125,7 @@ Example
 
 Contribution
 ------------
-If you're interested in contributing code to this project, check out the [contribution guidelines](docs/README_contribution.md).
+If you're interested in contributing code to this project, check out the [contribution guidelines](contribution.md).
 
 License
 -------
