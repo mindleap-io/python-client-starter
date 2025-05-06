@@ -123,4 +123,4 @@ If you're interested in contributing code to this project, check out the [contri
 
 License
 -------
-This Python client library is open source under the [MIT License](LICENSE).
+The Mindleap Starter Python Client library is open source under the [MIT License](LICENSE).
