@@ -6,3 +6,6 @@ url: https://mindleap-io.github.io/python-client-starter
 
 aux_links:
   Project Repository: https://github.com/mindleap-io/python-client-starter
+
+back_to_top: true
+back_to_top_text: "Back to top"
