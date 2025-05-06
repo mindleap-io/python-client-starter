@@ -1,0 +1,8 @@
+title: Mindleap Starter Python Client
+description: The offical Python Client library for Mindleap Starter
+theme: just-the-docs
+
+url: https://mindleap-io.github.io/python-client-starter
+
+aux_links:
+  Project Repository: https://github.com/mindleap-io/python-client-starter
