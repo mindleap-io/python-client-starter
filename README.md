@@ -3,8 +3,8 @@ Mindleap Starter Python Client
 This is the official Python client library for **Mindleap Starter**.
 
 **Mindleap** is a knowledge graph system that allows you to ingest, transform, explore and analyze:
-    - **any** type of *structured* or *unstructured* data
-    - from laptop to **planet** scale
+- **any** type of *structured* or *unstructured* data
+- from laptop to **planet** scale
 
 **Mindleap Starter** is a limited version, for smaller scale knowledge graphs.
 
@@ -17,32 +17,32 @@ You can use this Python library in conjunction with the Mindleap Starter Web App
 Want to integrate Mindleap in your organization?
 ------------------------------------------------
 Start small:
-    - Download [Mindleap Starter](https://mindleap.io/mindleap-starter) for non-commercial use
-    - Use this Python library in [Jupyter Notebook](https://jupyter.org/) or in [your own application code](#example)
+- Download [Mindleap Starter](https://mindleap.io/mindleap-starter) for non-commercial use
+- Use this Python library in [Jupyter Notebook](https://jupyter.org/) or in [your own application code](#example)
 
 Integrate knowledge graphs in your business applications:
-    - Acquire a paid license for Mindleap Starter
-    - Use this Python library in [your own application code](#example)
+- Acquire a paid license for Mindleap Starter
+- Use this Python library in [your own application code](#example)
 
 Integrate knowledge graphs in your organization:
-    - Acquire the enterprise version of [Mindleap](https://mindleap.io/mindleap)
-    - Use an orchestration framework, such as [Apache NiFi](https://nifi.apache.org/) or [Camunda](https://camunda.com/), to perform tasks in **Mindleap** via client libraries (Python/Java) or the **Mindleap REST API**
+- Acquire the enterprise version of [Mindleap](https://mindleap.io/mindleap)
+- Use an orchestration framework, such as [Apache NiFi](https://nifi.apache.org/) or [Camunda](https://camunda.com/), to perform tasks in **Mindleap** via client libraries (Python/Java) or the **Mindleap REST API**
 
 Development
 -----------
 1. Install the mindleap-starter-python-client package:
 
     ```shell
-    > pip install mindleap-starter-python-client
+    pip install mindleap-starter-python-client
     ```
 
 2. Set up your local environment:
-   - Create a file named `.env` in the project root.
-   - Fill in the **Mindleap Starter** host url (adjust the port, if necessary)
+- Create a file named `.env` in the project root.
+- Fill in the **Mindleap Starter** host url (adjust the port, if necessary)
 
-    ```shell
-    MINDLEAP_STARTER_HOST_URL=http://localhost:8090
-    ```
+   ```shell
+   MINDLEAP_STARTER_HOST_URL=http://localhost:8090
+   ```
 
 Happy coding!
 

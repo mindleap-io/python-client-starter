@@ -32,7 +32,7 @@ Development Environment
 
 5. Set up your local environment:
 - Create a file named `.env` in the project root.
-- Add the following content, replacing the bracketed values with your values:
+- Fill in the **Mindleap Starter** host url (adjust the port, if necessary)
 
     ```shell
     MINDLEAP_STARTER_HOST_URL=http://localhost:8090
