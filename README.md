@@ -32,7 +32,7 @@ Integrate knowledge graphs in your organization:
 
 Development
 -----------
-1. Install the mindleap-starter-python-client package:
+1. Install the [mindleap-starter-python-client](https://pypi.org/project/mindleap-starter-python-client/) package:
 
     ```shell
     pip install mindleap-starter-python-client
