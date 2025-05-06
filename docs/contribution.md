@@ -17,19 +17,19 @@ Development Environment
 2. Install a virtual environment:
 
     ```shell
-    > pipenv shell
+    pipenv shell
     ```
 
 3. Install the required development packages:
 
     ```shell
-    > pipenv install --dev
+    pipenv install --dev
     ```
 
 4. Build the project:
 
     ```shell
-    > pipenv run pip install -e .
+    pipenv run pip install -e .
     ```
 
 5. Set up your local environment:
@@ -43,5 +43,5 @@ Development Environment
 6. Run the tests, for example:
 
     ```shell
-    > pipenv run pytest tests/test_1_graph_model_service.py
+    pipenv run pytest tests/test_1_graph_model_service.py
     ```
