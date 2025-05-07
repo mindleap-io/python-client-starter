@@ -2,6 +2,8 @@ Mindleap Starter Python Client
 ==============================
 This is the official Python client library for **Mindleap Starter**.
 
+[Read the full documentation here](https://mindleap-io.github.io/python-client-starter/)
+
 **Mindleap** is a knowledge graph system that allows you to ingest, transform, explore and analyze:
 - **any** type of *structured* or *unstructured* data
 - from laptop to **planet** scale
@@ -30,7 +32,7 @@ Integrate knowledge graphs in your organization:
 
 Development
 -----------
-1. Install the mindleap-starter-python-client package:
+1. Install the [mindleap-starter-python-client](https://pypi.org/project/mindleap-starter-python-client/) package:
 
     ```shell
     pip install mindleap-starter-python-client
