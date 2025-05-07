@@ -72,7 +72,6 @@ Examples
                 .with_value_type(PropertyValueType.String)
             )
             .add_labelling_property_type("name")
-            .with_discriminator_property_type("name")
         )
         phone_entity_model: EntityModel = (
             EntityModel()
@@ -86,7 +85,6 @@ Examples
                 .with_value_type(PropertyValueType.String)
             )
             .add_labelling_property_type("phone_number")
-            .with_discriminator_property_type("phone_number")
         )
         person_relation_model: RelationModel = (
             RelationModel()
