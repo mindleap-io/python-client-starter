@@ -111,7 +111,7 @@ Example
                 .add_property(
                     Property()
                     .with_property_type("name")
-                    .with_property_value(StringPropertyValueHolder("James"))
+                    .with_property_value(StringPropertyValue("James"))
                 )
             )
         )

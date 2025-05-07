@@ -20,7 +20,7 @@ class Property(AbstractObject):
     def __init__(self):
         super().__init__()
         self.property_type: str | None = None
-        self.property_value: AbstractPropertyValueHolder | None = None
+        self.property_value: AbstractPropertyValue | None = None
 
     def to_json(self) -> dict:
         return {
@@ -30,13 +30,13 @@ class Property(AbstractObject):
 
     def from_json(self, json: dict) -> None:
         self.property_type = json["property_type"]
-        self.property_value = property_value_holder_from_json(json["property_value"]) if json["property_value"] else None
+        self.property_value = property_value_from_json(json["property_value"]) if json["property_value"] else None
 
     def with_property_type(self, property_type: str):
         self.property_type = property_type
         return self
 
-    def with_property_value(self, property_value: AbstractPropertyValueHolder):
+    def with_property_value(self, property_value: AbstractPropertyValue):
         self.property_value = property_value
         return self
 

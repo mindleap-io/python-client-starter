@@ -8,6 +8,11 @@ _SIMPLE_MODEL_NAME: str = "Simple Model"
 _COMPLEX_MODEL_ID: UUID = UUID("00000000-0000-0000-0000-000000000002")
 _COMPLEX_MODEL_NAME: str = "Complex Model"
 
+def test_delete_all() -> None:
+    graph_models: list[GraphModel] = graph_model_service.get_graph_models()
+    for graph_model in graph_models:
+        graph_model_service.delete_graph_model(graph_model.id)
+
 def test_store_simple_graph_model() -> None:
     graph_model: GraphModel = (
         GraphModel()

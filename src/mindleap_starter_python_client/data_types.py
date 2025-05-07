@@ -45,7 +45,7 @@ class PropertyValueType(StrEnum):
     Time = "Time"
     Timestamp = "Timestamp"
 
-class AbstractPropertyValueHolder(object):
+class AbstractPropertyValue(object):
     def __str__(self):
         return json.dumps(self.to_json(), indent=2)
     
@@ -61,7 +61,7 @@ class AbstractPropertyValueHolder(object):
     def get_value(self) -> object:
         pass
 
-class BigIntegerPropertyValueHolder(AbstractPropertyValueHolder):
+class BigIntegerPropertyValue(AbstractPropertyValue):
     def __init__(self, value: int | None = None):
         self.value: int | None = value
 
@@ -80,7 +80,7 @@ class BigIntegerPropertyValueHolder(AbstractPropertyValueHolder):
     def get_value(self) -> int:
         return self.value
 
-class BooleanPropertyValueHolder(AbstractPropertyValueHolder):
+class BooleanPropertyValue(AbstractPropertyValue):
     def __init__(self, value: bool | None = None):
         self.value: bool | None = value
 
@@ -99,7 +99,7 @@ class BooleanPropertyValueHolder(AbstractPropertyValueHolder):
     def get_value(self) -> bool:
         return self.value
 
-class DatePropertyValueHolder(AbstractPropertyValueHolder):
+class DatePropertyValue(AbstractPropertyValue):
     def __init__(self, value: date | None = None):
         self.value: date | None = value
 
@@ -118,7 +118,7 @@ class DatePropertyValueHolder(AbstractPropertyValueHolder):
     def get_value(self) -> date:
         return self.value
 
-class DoublePropertyValueHolder(AbstractPropertyValueHolder):
+class DoublePropertyValue(AbstractPropertyValue):
     def __init__(self, value: float | None = None):
         self.value: float | None = value
 
@@ -134,7 +134,7 @@ class DoublePropertyValueHolder(AbstractPropertyValueHolder):
     def get_value(self) -> float:
         return self.value
 
-class IntegerPropertyValueHolder(AbstractPropertyValueHolder):
+class IntegerPropertyValue(AbstractPropertyValue):
     def __init__(self, value: int | None = None):
         self.value: int | None = value
 
@@ -153,7 +153,7 @@ class IntegerPropertyValueHolder(AbstractPropertyValueHolder):
     def get_value(self) -> int:
         return self.value
 
-class StringPropertyValueHolder(AbstractPropertyValueHolder):
+class StringPropertyValue(AbstractPropertyValue):
     def __init__(self, value: str | None = None):
         self.value: str | None = value
 
@@ -172,7 +172,7 @@ class StringPropertyValueHolder(AbstractPropertyValueHolder):
     def get_value(self) -> str:
         return self.value
 
-class TimePropertyValueHolder(AbstractPropertyValueHolder):
+class TimePropertyValue(AbstractPropertyValue):
     def __init__(self, value: time | None = None):
         self.value: time | None = value
 
@@ -191,7 +191,7 @@ class TimePropertyValueHolder(AbstractPropertyValueHolder):
     def get_value(self) -> time:
         return self.value
 
-class TimestampPropertyValueHolder(AbstractPropertyValueHolder):
+class TimestampPropertyValue(AbstractPropertyValue):
     def __init__(self, value: datetime | None = None):
         self.value: datetime | None = value
 
@@ -210,25 +210,25 @@ class TimestampPropertyValueHolder(AbstractPropertyValueHolder):
     def get_value(self) -> datetime:
         return self.value
 
-def property_value_holder_from_json(json: dict) -> AbstractPropertyValueHolder:
-    property_value_holder: [AbstractPropertyValueHolder | None] = None
+def property_value_from_json(json: dict) -> AbstractPropertyValue:
+    property_value: [AbstractPropertyValue | None] = None
     property_value_type: PropertyValueType = json["property_value_type"]
     match property_value_type:
         case PropertyValueType.BigInteger:
-            property_value_holder = BigIntegerPropertyValueHolder()
+            property_value = BigIntegerPropertyValue()
         case PropertyValueType.Boolean:
-            property_value_holder = BooleanPropertyValueHolder()
+            property_value = BooleanPropertyValue()
         case PropertyValueType.Date:
-            property_value_holder = DatePropertyValueHolder()
+            property_value = DatePropertyValue()
         case PropertyValueType.Double:
-            property_value_holder = DoublePropertyValueHolder()
+            property_value = DoublePropertyValue()
         case PropertyValueType.Integer:
-            property_value_holder = IntegerPropertyValueHolder()
+            property_value = IntegerPropertyValue()
         case PropertyValueType.String:
-            property_value_holder = StringPropertyValueHolder()
+            property_value = StringPropertyValue()
         case PropertyValueType.Time:
-            property_value_holder = TimePropertyValueHolder()
+            property_value = TimePropertyValue()
         case PropertyValueType.Timestamp:
-            property_value_holder = TimestampPropertyValueHolder()
-    property_value_holder.from_json(json)
-    return property_value_holder
+            property_value = TimestampPropertyValue()
+    property_value.from_json(json)
+    return property_value

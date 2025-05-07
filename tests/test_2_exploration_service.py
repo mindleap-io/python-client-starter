@@ -9,6 +9,11 @@ _EXPLORATION_1_ID: UUID = UUID("00000000-0000-0000-0000-000000000001")
 _EXPLORATION_1_NAME: str = "Exploration 1"
 _COMPLEX_MODEL_ID: UUID = UUID("00000000-0000-0000-0000-000000000002")
 
+def test_delete_all() -> None:
+    explorations: list[Exploration] = exploration_service.get_explorations()
+    for exploration in explorations:
+        exploration_service.delete_exploration(exploration.id)
+
 def test_store_exploration() -> None:
     graph_model: GraphModel = graph_model_service.get_graph_model_by_id(_COMPLEX_MODEL_ID)
     person_1: Entity = (
@@ -17,7 +22,7 @@ def test_store_exploration() -> None:
         .add_property(
             Property()
             .with_property_type("name")
-            .with_property_value(StringPropertyValueHolder("James"))
+            .with_property_value(StringPropertyValue("James"))
         )
     )
     person_2: Entity = (
@@ -26,7 +31,7 @@ def test_store_exploration() -> None:
         .add_property(
             Property()
             .with_property_type("name")
-            .with_property_value(StringPropertyValueHolder("William"))
+            .with_property_value(StringPropertyValue("William"))
         )
     )
     person_3: Entity = (
@@ -35,7 +40,7 @@ def test_store_exploration() -> None:
         .add_property(
             Property()
             .with_property_type("name")
-            .with_property_value(StringPropertyValueHolder("Agatha"))
+            .with_property_value(StringPropertyValue("Agatha"))
         )
     )
     exploration: Exploration = (
@@ -54,7 +59,7 @@ def test_store_exploration() -> None:
             .with_property(
                 Property()
                 .with_property_type("description")
-                .with_property_value(StringPropertyValueHolder("Siblings"))
+                .with_property_value(StringPropertyValue("Siblings"))
             )
         )
         .add_relation(
@@ -65,7 +70,7 @@ def test_store_exploration() -> None:
             .with_property(
                 Property()
                 .with_property_type("description")
-                .with_property_value(StringPropertyValueHolder("Siblings"))
+                .with_property_value(StringPropertyValue("Siblings"))
             )
         )
         .add_relation(
@@ -76,7 +81,7 @@ def test_store_exploration() -> None:
             .with_property(
                 Property()
                 .with_property_type("description")
-                .with_property_value(StringPropertyValueHolder("Siblings"))
+                .with_property_value(StringPropertyValue("Siblings"))
             )
         )
     )

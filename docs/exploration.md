@@ -36,7 +36,7 @@ Example
             .add_property(
                 Property()
                 .with_property_type("name")
-                .with_property_value(StringPropertyValueHolder("James"))
+                .with_property_value(StringPropertyValue("James"))
             )
         )
         person_2: Entity = (
@@ -45,7 +45,7 @@ Example
             .add_property(
                 Property()
                 .with_property_type("name")
-                .with_property_value(StringPropertyValueHolder("William"))
+                .with_property_value(StringPropertyValue("William"))
             )
         )
         person_3: Entity = (
@@ -54,7 +54,7 @@ Example
             .add_property(
                 Property()
                 .with_property_type("name")
-                .with_property_value(StringPropertyValueHolder("Agatha"))
+                .with_property_value(StringPropertyValue("Agatha"))
             )
         )
         exploration: Exploration = (
@@ -73,7 +73,7 @@ Example
                 .with_property(
                     Property()
                     .with_property_type("description")
-                    .with_property_value(StringPropertyValueHolder("Siblings"))
+                    .with_property_value(StringPropertyValue("Siblings"))
                 )
             )
             .add_relation(
@@ -84,7 +84,7 @@ Example
                 .with_property(
                     Property()
                     .with_property_type("description")
-                    .with_property_value(StringPropertyValueHolder("Siblings"))
+                    .with_property_value(StringPropertyValue("Siblings"))
                 )
             )
             .add_relation(
@@ -95,7 +95,7 @@ Example
                 .with_property(
                     Property()
                     .with_property_type("description")
-                    .with_property_value(StringPropertyValueHolder("Siblings"))
+                    .with_property_value(StringPropertyValue("Siblings"))
                 )
             )
         )

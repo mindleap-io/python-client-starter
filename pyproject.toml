@@ -9,7 +9,7 @@ addopts = [
 
 [project]
 name = "mindleap-starter-python-client"
-version = "1.0.5"
+version = "1.0.6"
 authors = [
     { name = "Erik Mata"},
 ]
